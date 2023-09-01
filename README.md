@@ -10,22 +10,22 @@ To use this GitHub Action in your workflow, you can add the following YAML confi
 name: Power Action Workflow
 
 on:
-  push:
-    branches:
-      - main # Replace with your desired branch
+    push:
+        branches:
+            - main # Replace with your desired branch
 
 jobs:
-  power_action:
-    name: Send Power Action to Pterodactyl Server
-    runs-on: ubuntu-latest
-
-    - name: Execute Pterodactyl Power Action
-      uses: D3OXY/pterodactyl-power@v1
-      with:
-        PANEL_URL: 'https://your-panel-url.com'
-        API_KEY: ${{ secrets.PTERODACTYL_API_KEY }}
-        SERVER_ID: ${{ secrets.PTERODACTYL_SERVER_ID }}
-        POWER_ACTION: 'START' # You can change this to "STOP," "RESTART," or "KILL" as needed
+    power_action:
+        name: Send Power Action to Pterodactyl Server
+        runs-on: ubuntu-latest
+        steps:
+            - name: Execute Pterodactyl Power Action
+              uses: D3OXY/pterodactyl-power@v1
+              with:
+                  PANEL_URL: "https://your-panel-url.com"
+                  API_KEY: ${{ secrets.PTERODACTYL_API_KEY }}
+                  SERVER_ID: ${{ secrets.PTERODACTYL_SERVER_ID }}
+                  POWER_ACTION: "START" # You can change this to "STOP," "RESTART," or "KILL" as needed
 ```
 
 Ensure that you have the necessary secrets (`API_KEY`, `SERVER_ID`, and optionally `PANEL_URL`) defined in your repository's settings.
@@ -45,22 +45,22 @@ Here's an example of how to use this action in a workflow:
 name: Power Action Workflow
 
 on:
-  push:
-    branches:
-      - main
+    push:
+        branches:
+            - main
 
 jobs:
-  power_action:
-    name: Send Power Action to Pterodactyl Server
-    runs-on: ubuntu-latest
-
-    - name: Execute Pterodactyl Power Action
-      uses: D3OXY/pterodactyl-power@v1
-      with:
-        PANEL_URL: "https://panel.deoxy.dev"
-        API_KEY: ${{ secrets.PTERODACTYL_API_KEY }}
-        SERVER_ID: ${{ secrets.PTERODACTYL_SERVER_ID }}
-        POWER_ACTION: "restart" # You can change this to "start," "restart," or "kill" as needed
+    power_action:
+        name: Send Power Action to Pterodactyl Server
+        runs-on: ubuntu-latest
+        steps:
+            - name: Execute Pterodactyl Power Action
+              uses: d3oxy/pterodactyl-power@v1
+              with:
+                  PANEL_URL: "https://panel.deoxy.dev"
+                  API_KEY: ${{ secrets.PTERODACTYL_API_KEY }}
+                  SERVER_ID: ${{ secrets.PTERODACTYL_SERVER_ID }}
+                  POWER_ACTION: "restart" # You can change this to "start," "restart," or "kill" as needed
 ```
 
 Made with 💙 by [d3oxy](https://deoxy.dev)
