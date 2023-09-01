@@ -1,0 +1,29 @@
+name: "pterodactyl-power"
+description: "Send power actions to pterodactyl panel"
+author: "[d3oxy]"
+
+inputs:
+    PANEL_URL:
+        description: "The pterodactyl panel URL"
+        required: true
+
+    API_KEY:
+        description: "the bearer token for the panel to authorize"
+        required: true
+
+    SERVER_ID:
+        description: "The ID of that panel that has to be restarted"
+        required: true
+
+    POWER_ACTION:
+        description: 'The power action that has to be executed ("start", "stop", "restart", "kill")'
+        required: false
+        default: "restart"
+
+runs:
+    using: "node18"
+    main: "dist/index.js"
+
+branding:
+    icon: "power"
+    color: "green"
