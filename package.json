@@ -1,12 +1,22 @@
 {
-  "name": "pterodactyl-power",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+    "name": "pterodactyl-power",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "tsup src/index.ts"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@actions/core": "^1.10.0",
+        "axios": "^1.5.0"
+    },
+    "devDependencies": {
+        "@types/node": "^20.5.7",
+        "tsup": "^7.2.0",
+        "typescript": "^5.2.2"
+    }
 }
