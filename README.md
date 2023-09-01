@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
 
     - name: Execute Pterodactyl Power Action
-      uses: d3oxy/pterodactyl-power@v1
+      uses: D3OXY/pterodactyl-power@v1
       with:
         PANEL_URL: 'https://your-panel-url.com'
         API_KEY: ${{ secrets.PTERODACTYL_API_KEY }}
@@ -55,7 +55,7 @@ jobs:
     runs-on: ubuntu-latest
 
     - name: Execute Pterodactyl Power Action
-      uses: d3oxy/pterodactyl-power@v1
+      uses: D3OXY/pterodactyl-power@v1
       with:
         PANEL_URL: "https://panel.deoxy.dev"
         API_KEY: ${{ secrets.PTERODACTYL_API_KEY }}

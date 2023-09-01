@@ -1,6 +1,6 @@
 name: "pterodactyl-power"
 description: "Send power actions to pterodactyl panel"
-author: "[d3oxy]"
+author: "[D3OXY]"
 
 inputs:
     PANEL_URL:
